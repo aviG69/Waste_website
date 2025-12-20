@@ -1,0 +1,406 @@
+/* --------------------------- GLOBAL RESET --------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* --------------------------- PAGE BACKGROUND --------------------------- */
+body {
+  background: linear-gradient(to bottom right, #e3c6ff, #c9e7ff);
+  min-height: 100vh;
+}
+
+/* Wrapper so text isn’t touching the edges */
+.home-container,
+.page-container {
+  padding: 30px;
+}
+
+/* --------------------------- HEADER --------------------------- */
+.home-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.home-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1D1D1D;
+  margin-bottom: 10px;
+}
+
+.home-subtitle {
+  font-size: 16px;
+  color: #444;
+}
+
+/* --------------------------- GRID LAYOUT --------------------------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* --------------------------- STAT CARD --------------------------- */
+.stat-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-value {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-info {
+  color: #555;
+  font-size: 14px;
+}
+
+/* --------------------------- METER BAR --------------------------- */
+.meter-bar {
+  width: 100%;
+  height: 8px;
+  background: #e8e8e8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 8px;
+  background: #2ecc71;
+  border-radius: 5px;
+}
+
+/* --------------------------- SECTION TITLE --------------------------- */
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --------------------------- BUTTON ROW --------------------------- */
+/* allow wrap so extra buttons (Login/Signup) don't overflow */
+.buttons-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 35px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  box-shadow: 0 6px 18px rgba(12,25,30,0.06);
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.95;
+  transform: translateY(-3px);
+}
+
+/* existing color variants */
+.btn.blue {
+  background: #2d8bff;
+}
+
+.btn.green {
+  background: #2e8b57;
+}
+
+.btn.yellow {
+  background: #f7a520;
+  color: #111;
+}
+
+.btn.purple {
+  background: #7028e4;
+}
+
+/* NEW: gray (Login) and red/orange variants — style for signup/login */
+.btn.gray {
+  background: #6b7280;    /* neutral gray for login */
+}
+
+.btn.red {
+  background: #ef4444;
+}
+
+.btn.orange {
+  background: #fb923c;
+}
+
+/* --------------------------- PAGE SPECIFIC LAYOUTS --------------------------- */
+.page-container h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.page-container p {
+  margin-bottom: 10px;
+}
+
+/* --------------------------- FOR FORMS (Feedback Page) --------------------------- */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+form button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #2d8bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.85;
+}
+
+/* --------------------------- MAP PAGE --------------------------- */
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* --------------------------- NAVBAR FIX --------------------------- */
+nav {
+  background: #0ea5e9 !important;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white !important;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------
+   AUTH (Login / Signup) STYLES
+   --------------------------- */
+.auth-container {
+  max-width: 420px;
+  margin: 24px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(8,30,40,0.06);
+}
+
+.auth-container h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.auth-field {
+  margin-bottom: 12px;
+}
+
+.auth-field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #334;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  font-size: 15px;
+}
+
+/* action buttons on auth form */
+.auth-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* small helper text */
+.auth-help {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* link-style button */
+.auth-link {
+  background: transparent;
+  border: none;
+  color: #2d8bff;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* responsive tweak for auth */
+@media (max-width: 520px) {
+  .auth-container {
+    margin: 12px;
+    padding: 16px;
+  }
+}
+
+/* ---------------------------
+   QUIZ / PROGRESS (if present)
+   --------------------------- */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #4fc3f7, #0277bd);
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+
+/* styling for answer options */
+.answer {
+  padding: 12px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.answer:hover {
+  background: #e8e8e8;
+}
+
+.answer.selected {
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(76,175,80,0.3);
+}
+
+/* small results box */
+.results-box {
+  background: #fdfdf8;
+  border-left: 4px solid #4caf50;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* --------------------------- BIN LIST --------------------------- */
+.bins-list { display:flex; flex-direction:column; gap:10px; }
+.bin-card { display:flex; justify-content:space-between; align-items:center; background:#fff; padding:12px; border-radius:10px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.bin-icon { width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:700; }
+
+/* --------------------------- SMALL LAYOUT / RESPONSIVE --------------------------- */
+@media (max-width: 880px) {
+  .home-title { font-size: 30px; }
+  .stats-grid { gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .buttons-row { gap: 10px; padding: 0 8px; }
+  .stat-card { padding: 14px; }
+}
+
+@media (max-width: 520px) {
+  .home-title { font-size: 24px; }
+  .nav-links { display:none; } /* keep navbar compact on mobile */
+  .buttons-row { justify-content:center; }
+  .auth-container { margin: 16px; padding: 16px; }
+}
+
+/* small utility */
+.text-muted { color:#6b7280; font-size:13px; }
+.center { text-align:center; }
+
+/* ---------------- SECOND BUTTON ROW ---------------- */
+.buttons-row.secondary {
+  margin-top: 150px;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Extra button colors */
+.btn.gray {
+  background: #6b7280;
+}
+
+.btn.dark {
+  background: #111827;
+}
+
+.buttons-row.secondary {
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #2d8bff;
+  color: #2d8bff;
+}
+
+.btn.outline:hover {
+  background: #2d8bff;
+  color: white;
+}
+
+
