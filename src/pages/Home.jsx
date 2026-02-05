@@ -40,12 +40,12 @@ export default function Home() {
 
         <div className="stat-card">
           <h3>♻ Recycling Rate</h3>
-          <p className="stat-value">68%</p>
-          <p className="stat-info">↑ 4% vs last month</p>
+          <p className="stat-value">69%</p>
+          <p className="stat-info">↑ 67% vs last month</p>
         </div>
       </div>
 
-      <h2 className="section-title">📍 Nearby Waste Bins</h2>
+      <h2 className="section-title">⚡ Quick Actions ⚡</h2>
 
       {/* PRIMARY BUTTONS */}
       <div className="buttons-row">
